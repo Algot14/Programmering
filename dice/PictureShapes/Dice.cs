@@ -1,4 +1,6 @@
-﻿namespace PictureShapes
+﻿using System;
+
+namespace PictureShapes
 {
     class Dice
     {
@@ -10,14 +12,51 @@
         private Circle prick5;
         private Circle prick6;
         private Circle prick7;
+        private static Random numberGenerator;
+        private int number = 5;
+        
 
         public void Roll()
         {
-            
+            numberGenerator.Next(1, 7);
+            number = numberGenerator.Next(1, 7);
+
+            prick.MakeInVisible();
+            prick2.MakeInVisible();
+            prick3.MakeInVisible();
+            prick4.MakeInVisible();
+            prick5.MakeInVisible();
+            prick6.MakeInVisible();
+            prick7.MakeInVisible();
+
+
+            if (number %2 == 1)
+            {
+                prick.MakeVisible();
+            }
+
+            if (number >= 2)
+            {
+                prick2.MakeVisible();
+                prick3.MakeVisible();
+            }
+
+            if (number >= 4)
+            {
+                prick4.MakeVisible();
+                prick5.MakeVisible();
+
+            }
+            if (number == 6)
+            {
+                prick6.MakeVisible();
+                prick7.MakeVisible();
+            }
         }
         
         public Dice()
         {
+            numberGenerator = new Random();
             DrawImage();
         }
         public void DrawImage()
@@ -77,6 +116,8 @@
             prick7.ChangeSize(85);
             prick7.MoveHorizontal(80);
             prick7.MoveVertical(40);
+
+            
 
 
 
