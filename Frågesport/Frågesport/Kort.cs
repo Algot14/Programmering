@@ -17,10 +17,20 @@ namespace Frågesport
         }
 
 
-       
         
-        
-    
-    
+        public void Skrivut()
+        {
+            Console.WriteLine(fråga);
+        }
+
+        public String Svar
+        {
+            get
+            {
+                return svar;
+            }
+        }
+
+
     }
 }

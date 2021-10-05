@@ -15,14 +15,21 @@ namespace Frågesport
             frågor.Add(new Kort("Vad heter Sveriges huvudstad?", "Stockholm"));
             frågor.Add(new Kort("Hur många dagar är det på ett år?", "365"));
             frågor.Add(new Kort("Hur många kort är det i en kortlek?", "52"));
-
         }
 
-        public void Drakort()
+        public Kort Drakort()
         {
-
+            int lastIndex = frågor.Count - 1;
+            Kort kort = frågor[lastIndex];
+            frågor.RemoveAt(lastIndex);
+            return kort;
         }
-    
+
+        public bool HasCards()
+        {
+            return frågor.Count > 0;
+        }
+                                                                                                 
     
     }
 }
