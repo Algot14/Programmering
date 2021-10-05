@@ -4,31 +4,31 @@ using System.Text;
 
 namespace Frågesport
 {
-    class Kort
+    class Kort : ModerKort
     {
-        private string fråga;
+        
         private string svar;
         
 
-        public Kort(String f, String s)
+        public Kort(String f, String s):base(f)
         {
-            fråga = f;
+            
             svar = s;
         }
 
 
         
-        public void Skrivut()
+        public override void Skrivut()
         {
             Console.WriteLine(fråga);
         }
 
-        public String Svar
+        public override String GetSvar()
         {
-            get
-            {
-                return svar;
-            }
+            
+            
+             return svar;
+            
         }
 
 

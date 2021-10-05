@@ -18,13 +18,15 @@ namespace Frågesport
                 while (frågor.HasCards())
                 {
 
-                    Kort mittKort = frågor.Drakort();
+                    
+                    
+                    ModerKort mittKort = frågor.Drakort();
                     mittKort.Skrivut();
 
                     Console.WriteLine("Svar: ");
                     String svar2;
                     svar2 = Console.ReadLine();
-                    if (svar2 == mittKort.Svar)
+                    if (svar2 == mittKort.GetSvar())
                     {
                         Console.WriteLine("Du gissade rätt, grattis!");
                     }
@@ -32,7 +34,7 @@ namespace Frågesport
                     else
                     {
                         Console.WriteLine("Du gissade fel!");
-                        Console.WriteLine("Rätt svar är: " + mittKort.Svar);
+                        Console.WriteLine("Rätt svar är: " + mittKort.GetSvar());
                     }
 
 
