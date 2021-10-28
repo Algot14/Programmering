@@ -15,9 +15,10 @@ namespace ParkingMachineConsole
         /// </summary>
         /// <param name="price">The amount of money payed for the ticket. A hole number.</param>
         /// <param name="costPerHour">The cost per hour to park. A hole number.</param>
-        public Ticket(int price, int costPerHour)
+        public Ticket(int p, int c)
         {
-            // Your code here
+            costPerHour = c;
+            price = p;
         }
 
 
