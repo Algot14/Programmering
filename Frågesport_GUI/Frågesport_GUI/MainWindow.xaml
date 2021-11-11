@@ -1,0 +1,24 @@
+﻿<Window x:Class="Frågesport_GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Frågesport_GUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Name="förstaSida">
+        <TextBlock Name="välkommen" FontSize="50" Margin="10" Text="Välkommen till Algots Frågesport!" TextAlignment="Center"></TextBlock>
+        <TextBlock Name="emptySpace" FontSize="60"></TextBlock>
+        <Button Name="startKnapp" FontSize="50" Margin="10" Content="Klicka här för att starta" Width="520" Background="Red" Click="startKnapp_Click"></Button>
+        <TextBlock Name="fråga" FontSize="50" Margin="10" HorizontalAlignment="Center"></TextBlock>
+        <StackPanel Orientation="Horizontal">
+            <Button Name="svar1" FontSize="45" Margin="10" HorizontalAlignment="Left"></Button>
+            <Button Name="svar2" FontSize="45" Margin="10" HorizontalAlignment="Right"></Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button Name="svar3" FontSize="45" Margin="10" HorizontalAlignment="Left"></Button>
+            <Button Name="svar4" FontSize="45" Margin="10" HorizontalAlignment="Right"></Button>  
+        </StackPanel>
+    </StackPanel>
+    
+</Window>
