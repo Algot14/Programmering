@@ -19,11 +19,13 @@ namespace Frågesport_GUI
             flersvar.Add("2");
             flersvar.Add("3");
             flersvar.Add("4");
+            flersvar.Add("8");
 
             List<String> flersvar2 = new List<String>();
             flersvar2.Add("New York");
             flersvar2.Add("Washington DC");
             flersvar2.Add("Texas");
+            flersvar2.Add("LA");
 
             List<String> flersvar3 = new List<String>();
             flersvar3.Add("10");
@@ -47,10 +49,17 @@ namespace Frågesport_GUI
 
         public ModerKort Drakort()
         {
-            int lastIndex = frågor.Count - 1;
-            ModerKort kort = frågor[lastIndex];
-            frågor.RemoveAt(lastIndex);
-            return kort;
+            if (frågor.Count == 0)
+            {
+                return null;
+            }
+            else
+            {
+                int lastIndex = frågor.Count - 1;
+                ModerKort kort = frågor[lastIndex];
+                frågor.RemoveAt(lastIndex);
+                return kort;
+            }
         }
 
         public bool HasCards()
