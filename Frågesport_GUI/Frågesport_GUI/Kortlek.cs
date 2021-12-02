@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace Frågesport_GUI
@@ -7,6 +8,9 @@ namespace Frågesport_GUI
     class Kortlek
     {
         private List<ModerKort> frågor;
+        private string pathAndFileName;
+        private string fileName = "kortlek.txt";
+
 
         public Kortlek()
         {
@@ -15,7 +19,7 @@ namespace Frågesport_GUI
             //frågor.Add(new Kort("Vad heter Sveriges huvudstad?", "Stockholm"));
             //frågor.Add(new Kort("Hur många dagar är det på ett år?", "365"));
             //frågor.Add(new Kort("Hur många kort är det i en kortlek?", "52"));
-            List<String> flersvar = new List<String>();
+            /*List<String> flersvar = new List<String>();
             flersvar.Add("2");
             flersvar.Add("3");
             flersvar.Add("4");
@@ -39,12 +43,40 @@ namespace Frågesport_GUI
             flersvar4.Add("Lida");
             flersvar4.Add("Andas");
             flersvar4.Add("42");
+            
 
 
             frågor.Add(new Flersvar("Hur många ben har en kossa?", flersvar, "4"));
             frågor.Add(new Flersvar("Vad heter USA's huvudstad?", flersvar2, "Washington DC"));
             frågor.Add(new Flersvar("Hur många gruskorn finns det på jorden?", flersvar3, "46"));
             frågor.Add(new Flersvar("Vad är meningen med livet?", flersvar4, "42"));
+            */
+
+            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            pathAndFileName = Path.Combine(docPath, "kortlek.txt");
+
+            using (var sr = new StreamReader(pathAndFileName))
+            {
+                
+                
+                
+                string row = sr.ReadLine();
+
+                while (row != null)
+                {
+                    char[] avdelare = { ',' };
+                    string [] alt = sr.ReadLine().Split(avdelare);
+                    List<string> alternativ = new List<string>(alt);
+
+                    string svar = sr.ReadLine();
+                    Flersvar frågekort = new Flersvar(row, alternativ, svar);
+                    frågor.Add(frågekort);
+                    row = sr.ReadLine();
+                }
+            }
+
+
+
         }
 
         public ModerKort Drakort()
