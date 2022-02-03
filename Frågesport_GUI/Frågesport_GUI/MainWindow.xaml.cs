@@ -102,7 +102,7 @@ namespace Frågesport_GUI
             array1[2].Visibility = Visibility.Collapsed;
             array1[3].Visibility = Visibility.Collapsed;
             nästaFråga.Visibility = Visibility.Visible;
-            if (array1[0].Content == mittKort.GetSvar())
+            if (array1[0].Content.Equals(mittKort.GetSvar()))
             {
                 du_gissade_rätt.Visibility = Visibility.Visible;
 
@@ -126,7 +126,7 @@ namespace Frågesport_GUI
             array1[2].Visibility = Visibility.Collapsed;
             array1[3].Visibility = Visibility.Collapsed;
             nästaFråga.Visibility = Visibility.Visible;
-            if (array1[1].Content == mittKort.GetSvar())
+            if (array1[1].Content.Equals(mittKort.GetSvar()))
             {
                 du_gissade_rätt.Visibility = Visibility.Visible;
 
@@ -147,7 +147,7 @@ namespace Frågesport_GUI
             array1[2].Visibility = Visibility.Collapsed;
             array1[3].Visibility = Visibility.Collapsed;
             nästaFråga.Visibility = Visibility.Visible;
-            if (array1[2].Content == mittKort.GetSvar())
+            if (array1[2].Content.Equals(mittKort.GetSvar()))
             {
                 du_gissade_rätt.Visibility = Visibility.Visible;
 
@@ -169,7 +169,7 @@ namespace Frågesport_GUI
             array1[2].Visibility = Visibility.Collapsed;
             array1[3].Visibility = Visibility.Collapsed;
             nästaFråga.Visibility = Visibility.Visible;
-            if (array1[3].Content == mittKort.GetSvar())
+            if (array1[3].Content.Equals(mittKort.GetSvar()))
             {
                 du_gissade_rätt.Visibility = Visibility.Visible;
 

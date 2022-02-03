@@ -53,7 +53,7 @@ namespace Frågesport_GUI
             */
 
             string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            pathAndFileName = Path.Combine(docPath, "kortlek.txt");
+            pathAndFileName = Path.Combine(docPath, "frågor.txt");
 
             using (var sr = new StreamReader(pathAndFileName))
             {
