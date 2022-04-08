@@ -23,6 +23,10 @@ namespace Äventyrsspel
             {
                 return norr;
             }
+            set
+            {
+                norr = value;
+            }
         }
 
         public Room Söder
@@ -30,6 +34,10 @@ namespace Äventyrsspel
             get
             {
                 return söder;
+            }
+            set
+            {
+                söder = value;
             }
         }
 
@@ -39,6 +47,10 @@ namespace Äventyrsspel
             {
                 return väster;
             }
+            set
+            {
+                väster = value;
+            }
         }
 
         public Room Öster
@@ -47,6 +59,18 @@ namespace Äventyrsspel
             {
                 return öster;
             }
+            set
+            {
+                öster = value;
+            }
+        }
+
+        public string Beskrivning
+        {
+            get
+            {
+                return beskrivning;
+            }        
         }
 
 
